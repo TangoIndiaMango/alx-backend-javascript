@@ -33,40 +33,40 @@ describe('GET /cart/12', () => {
     });
   });
 
-  describe('GET /cart/1', () => {
-    it('Responds with 200 and id 1 in msg', (done) => {
+  describe('GET /cart/5', () => {
+    it('Responds with 200 and id 5 in message', (done) => {
       const options = {
-        url: 'http://localhost:7865/cart/1',
+        url: 'http://localhost:7865/cart/5',
         method: 'GET',
       };
 
       request(options, function (error, response, body) {
         expect(response.statusCode).to.equal(200);
-        expect(body).to.equal('Payment methods for cart 1');
+        expect(body).to.equal('Payment methods for cart 5');
         done();
       });
     });
   });
 
-  describe('GET /cart/123', () => {
-    it('Responds with 200 and id 123 in msg', (done) => {
+  describe('GET /cart/135', () => {
+    it('Responds with 200 and id 135 in msg', (done) => {
       const options = {
-        url: 'http://localhost:7865/cart/123',
+        url: 'http://localhost:7865/cart/135',
         method: 'GET',
       };
 
       request(options, function (error, response, body) {
         expect(response.statusCode).to.equal(200);
-        expect(body).to.equal('Payment methods for cart 123');
+        expect(body).to.equal('Payment methods for cart 135');
         done();
       });
     });
   });
 
-  describe('GET /cart/a12', () => {
+  describe('GET /cart/b12', () => {
     it('Responds with 404', (done) => {
       const options = {
-        url: 'http://localhost:7865/cart/a12',
+        url: 'http://localhost:7865/cart/b12',
         method: 'GET',
       };
 
@@ -77,10 +77,10 @@ describe('GET /cart/12', () => {
     });
   });
 
-  describe('GET /cart/a12b', () => {
+  describe('GET /cart/a1b', () => {
     it('Responds with 404', (done) => {
       const options = {
-        url: 'http://localhost:7865/cart/a12b',
+        url: 'http://localhost:7865/cart/a1b',
         method: 'GET',
       };
 
@@ -91,10 +91,10 @@ describe('GET /cart/12', () => {
     });
   });
 
-  describe('GET /cart/12b', () => {
+  describe('GET /cart/2b', () => {
     it('Responds with 404', (done) => {
       const options = {
-        url: 'http://localhost:7865/cart/12b',
+        url: 'http://localhost:7865/cart/2b',
         method: 'GET',
       };
 
